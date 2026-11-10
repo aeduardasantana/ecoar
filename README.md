@@ -13,3 +13,7 @@ Páginas estáticas em `site/`, CSS em `site/assets/css/ecoar.css`, JS de menu e
 Fontes: [Arquitetura do site](https://docs.google.com/document/d/1JIXPCES6Y3j6S7W0KO5R0scujG8i4WaFMoY3HQ3z85c/edit) e [Catálogo mestre](https://docs.google.com/document/d/1M1mSqlGR_vX_pCbSI3cw9w35j_oYY4kepFo9Ue3Jk2M/edit).
 
 Antes de cobrar: confirmar a disponibilidade real do produto, preços, agenda, autorizações de imagem e condições operacionais.
+
+## Analytics com consentimento
+
+Foi preservado o identificador GA4 já instalado neste repositório (`G-G4C7TJ2K13`). `site/assets/js/ga4-consent.js` só carrega a medição após consentimento expresso, em todas as páginas. Há opção de continuar sem medição e reabrir as preferências no site; política própria em `/privacidade/`.
