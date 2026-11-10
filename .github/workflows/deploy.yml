@@ -1,51 +1,44 @@
-name: Publicar ECOAR na Locaweb
+name: Validar e publicar ECOAR na Locaweb
 
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
-  group: deploy-ecoar
+  group: ecoar-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  validar:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validar SEO, arquivos, rotas e CTAs
+        run: python3 scripts/validate_site.py
 
-      - name: Validar arquivos do site
-        run: |
-          python3 - <<'PY'
-          import pathlib, re, sys, xml.etree.ElementTree as ET
-          base = pathlib.Path("site")
-          required = [base/"index.html",base/"assets/css/style.css",base/"assets/css/editorial.css",base/"sitemap.xml",base/"robots.txt"]
-          errors = [str(f) for f in required if not f.is_file() or not f.stat().st_size]
-          if not errors:
-              html = (base/"index.html").read_text(encoding="utf-8")
-              for fragment in ['lang="pt-BR"', 'href="https://ecoar.grupoeduardabispo.com.br/"','id="experiencia"','id="metodo"','id="bilingue"','id="organizacoes"','id="faq"']:
-                  if fragment not in html: errors.append("Falta no HTML: "+fragment)
-              ET.parse(base/"sitemap.xml")
-          if errors: sys.exit("Falha na validacao: "+", ".join(errors))
-          print("Validacao inicial concluida")
-          PY
-
-      - name: Verificar configuracao FTP
+  publicar:
+    if: github.event_name != 'pull_request'
+    needs: validar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Conferir segredos da Locaweb
         env:
           FTP_HOST: ${{ secrets.HOST }}
           FTP_USER: ${{ secrets.USER }}
           FTP_PASS: ${{ secrets.PASS }}
         run: |
           test -n "$FTP_HOST" && test -n "$FTP_USER" && test -n "$FTP_PASS" || (echo "HOST, USER ou PASS nao configurados" && exit 1)
-
-      - name: Instalar lftp
+      - name: Instalar cliente de publicacao
         run: |
           sudo apt-get update
           sudo apt-get install -y lftp
-
-      - name: Publicar somente em public_html/ecoar
+      - name: Enviar somente o site ECOAR
         env:
           FTP_HOST: ${{ secrets.HOST }}
           FTP_USER: ${{ secrets.USER }}
