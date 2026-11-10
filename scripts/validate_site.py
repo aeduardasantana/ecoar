@@ -11,7 +11,7 @@ ROOT = Path("site")
 DOMAIN = "https://ecoar.grupoeduardabispo.com.br"
 PATHS = [
     "/", "/aprender/", "/laboratorio/", "/seu-palco/", "/mentoria/",
-    "/organizacoes/", "/metodologia/", "/experiencias/", "/contato/",
+    "/organizacoes/", "/metodologia/", "/contato/",
     "/privacidade/", "/termos/", "/acessibilidade/", "/mapa-do-site/",
 ]
 FILES = [ROOT / ("index.html" if p == "/" else p.lstrip("/") + "index.html") for p in PATHS]
@@ -100,8 +100,20 @@ for f in STATIC:
 home = (ROOT / "index.html").read_text(encoding="utf-8")
 if home.count('class="offer-card"') != 6:
     ERRORS.append("A Home precisa apresentar exatamente 6 cards de produtos")
-if (ROOT / "metodologia/index.html").read_text(encoding="utf-8").count("Jornada não é um sétimo produto") != 1:
-    ERRORS.append("A Jornada precisa aparecer como metodologia, não produto")
+method=(ROOT / "metodologia/index.html").read_text(encoding="utf-8")
+if "Jornada ECOAR" not in method or "doze temas" not in method:
+    ERRORS.append("A metodologia deve apresentar a Jornada e os 12 temas")
+if (ROOT / "experiencias/index.html").exists():
+    ERRORS.append("Página independente de experiências foi descontinuada")
+for local in FILES:
+    content=local.read_text(encoding="utf-8") if local.is_file() else ""
+    if 'href="/experiencias/"' in content:
+        ERRORS.append(f"Link para página descontinuada: {local}")
+    for unwanted in ("não é um sétimo produto", "não é um produto separado", "sem venda independente", "sem atribuir depoimentos", "não constitui, por si só, comprovação de filiação"):
+        if unwanted.lower() in content.lower():
+            ERRORS.append(f"Nota interna ainda publicada em {local}: {unwanted}")
+if not (ROOT / "experiencias/.htaccess").is_file():
+    ERRORS.append("Redirecionamento da antiga galeria não configurado")
 
 if (ROOT / "sitemap.xml").exists():
     tree = ET.parse(ROOT / "sitemap.xml")
@@ -119,4 +131,4 @@ if (ROOT / "robots.txt").exists():
 if ERRORS:
     print("\n".join("ERRO: " + e for e in ERRORS), file=sys.stderr)
     raise SystemExit(1)
-print(f"ECOAR OK: {len(PATHS)} páginas, 6 produtos, CTAs WhatsApp, rodapé, links internos e sitemap.")
+print(f"ECOAR OK: {len(PATHS)} páginas, 6 produtos, Jornada metodológica, sem galeria independente, CTAs WhatsApp, rodapé e sitemap.")

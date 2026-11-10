@@ -51,5 +51,6 @@ jobs:
             set net:max-retries 2;
             set net:timeout 30;
             mirror --reverse --verbose --no-perms ./site/ ./public_html/ecoar/;
+            rm -f ./public_html/ecoar/experiencias/index.html;
             bye;
           "
