@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ECOAR | Laboratório de Oratória Bilíngue — Português + Libras</title>
+<meta name="description" content="ECOAR é o Laboratório de Oratória Bilíngue do GEB Empresarial: prática real de comunicação, feedback estruturado, Português e Libras, networking e liderança.">
+<meta name="keywords" content="ECOAR, laboratório de oratória, oratória bilíngue, oratória Libras, comunicação profissional, treinamento de comunicação, liderança, networking, GEB Empresarial">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#14211b">
+<link rel="canonical" href="https://ecoar.grupoeduardabispo.com.br/">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261014-3">
+<style>
+.ecoar-hero{background:linear-gradient(120deg,#f7f5ef 0 64%,#e8e2d4 64%);padding:5.4rem 0}
+.ecoar-hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:3rem;align-items:center}
+.ecoar-kicker{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.ecoar-chip{display:inline-flex;align-items:center;border:1px solid #c9c3b4;background:#fff;padding:.42rem .66rem;font-size:.76rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.ecoar-hero h1{font-size:clamp(2.7rem,5.5vw,5.35rem);margin:.3rem 0 1rem}
+.ecoar-hero h1 span{display:block;color:#745d18}
+.ecoar-hero .lead{max-width:760px}
+.ecoar-quote{border:1px solid var(--ink);padding:2rem;background:#fff;box-shadow:14px 14px 0 var(--accent)}
+.ecoar-quote strong{display:block;font-size:1.9rem;line-height:1.2}
+.ecoar-quote small{display:block;margin-top:1rem;color:var(--muted)}
+.ecoar-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.45rem}
+.ecoar-band{background:var(--ink);color:#fff;padding:1.1rem 0}
+.ecoar-band .wrap{display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap;font-weight:800}
+.ecoar-band span{color:#e4bd58}
+.ecoar-intro{max-width:900px}
+.ecoar-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ecoar-card{border:1px solid var(--line);background:#fff;padding:1.55rem}
+.ecoar-card .num{font-size:.82rem;font-weight:900;color:#745d18;letter-spacing:.08em}
+.ecoar-card h3{margin:.45rem 0 .7rem}
+.ecoar-card p{margin:0;color:#4f5b54}
+.ecoar-process{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ecoar-step{padding:1.6rem;border-top:5px solid var(--accent);background:#fff}
+.ecoar-step strong{font-size:1.45rem}
+.ecoar-step ul{margin:.85rem 0 0;padding-left:1.1rem;color:#4f5b54}
+.ecoar-bilingual{background:#0f2017;color:#fff}
+.ecoar-bilingual .split{align-items:center}
+.ecoar-symbol{font-size:clamp(3rem,8vw,7rem);font-weight:900;letter-spacing:-.07em;color:#e5bf59;line-height:.9}
+.ecoar-bilingual p{color:#d8e0da}
+.ecoar-paths{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.ecoar-path{border:1px solid var(--ink);padding:1.8rem;background:#fff}
+.ecoar-path h3{font-size:1.6rem}
+.ecoar-path .btn{margin-top:.75rem}
+.ecoar-rules{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem 1.6rem;margin-top:1.2rem}
+.ecoar-rule{display:flex;gap:.75rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.ecoar-rule b{color:#745d18}
+.ecoar-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem}
+.ecoar-topic{border:1px solid var(--line);padding:.9rem 1rem;background:#fff;font-weight:750}
+.ecoar-org{background:var(--paper)}
+.ecoar-org-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:2rem;align-items:start}
+.ecoar-org-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
+.ecoar-org-item{background:#fff;border:1px solid var(--line);padding:1rem}
+.ecoar-founder{display:grid;grid-template-columns:.7fr 1.3fr;gap:2rem;align-items:start}
+.ecoar-founder-mark{border:1px solid var(--ink);padding:2rem;background:var(--paper)}
+.ecoar-founder-mark strong{font-size:1.6rem;display:block}
+.ecoar-faq details{border-bottom:1px solid var(--line);padding:0}
+.ecoar-faq summary{cursor:pointer;font-weight:800;padding:1rem 0;list-style:none}
+.ecoar-faq summary::-webkit-details-marker{display:none}
+.ecoar-faq p{margin:0 0 1rem;color:#4f5b54}
+.ecoar-final{background:var(--ink);color:#fff}
+.ecoar-final .cta{background:transparent;border-color:#506057;color:#fff}
+.ecoar-final .cta p{color:#d1d8d3}
+.ecoar-secondary{font-size:.92rem;color:var(--muted);margin-top:1.3rem}
+@media(max-width:900px){
+.ecoar-hero-grid,.ecoar-grid-3,.ecoar-process,.ecoar-org-grid,.ecoar-founder{grid-template-columns:1fr}
+.ecoar-paths,.ecoar-rules,.ecoar-org-list{grid-template-columns:1fr}
+.ecoar-topics{grid-template-columns:repeat(2,1fr)}
+.ecoar-hero{background:var(--paper);padding:3.7rem 0}
+}
+@media(max-width:560px){.ecoar-topics{grid-template-columns:1fr}}
+</style>
+<style id="core-link-system">
+.topbar a,.footer a,main a:not(.btn){text-decoration:none}
+.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.86}
+main .btn{border-radius:9px;min-height:48px;padding:.8rem 1.2rem;text-align:center;line-height:1.25}
+main .actions,main .ecoar-actions{align-items:stretch}
+main .actions .btn,main .ecoar-actions .btn{flex:1 1 0;min-width:220px;max-width:320px}
+main .card{display:flex;flex-direction:column}
+main .card .action-btn,main .home-path .action-btn{width:100%;margin-top:auto}
+main .ecoar-path .btn{width:100%}
+main .cta>.btn{min-width:280px;max-width:320px}
+.site-map-card a:hover,.site-map-states a:hover{text-decoration:none}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:600px){main .actions .btn,main .ecoar-actions .btn,main .cta>.btn{width:100%;max-width:none;min-width:0}}
+</style><link rel="stylesheet" href="/assets/css/editorial.css?v=20261014-1">
+<style>html{scroll-padding-top:96px}.geb-editorial .brand{font-size:1.65rem}.geb-editorial .brand small{font-size:.6rem;letter-spacing:.05em}.geb-editorial .topbar .wrap a{color:#d5e4da}.geb-editorial .menu{gap:.8rem}.geb-editorial .menu a:not(.btn){font-size:.83rem}</style></head>
+<body class="geb-editorial">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="topbar"><div class="wrap"><span>ECOAR · Laboratório de Oratória Bilíngue</span><a href="https://gebempresarial.grupoeduardabispo.com.br/">Uma solução do GEB Empresarial</a></div></div>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="/">ECOAR<small>Português + Libras · GEB Empresarial</small></a><button class="menu-toggle" aria-controls="menu-principal" aria-expanded="false" type="button">Menu</button><nav class="menu" id="menu-principal" aria-label="Navegação principal"><a href="#experiencia">A experiência</a><a href="#metodo">Como funciona</a><a href="#bilingue">Português + Libras</a><a href="#organizacoes">Organizações</a><a href="#faq">Dúvidas</a><a class="btn primary" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20participar%20do%20ECOAR.">Quero participar</a></nav></div></header>
+<main id="conteudo">
+<section class="ecoar-hero ge-hero">
+<div class="wrap ecoar-hero-grid">
+<div>
+<div class="ecoar-kicker"><span class="ecoar-chip">GEB Empresarial</span><span class="ecoar-chip">Português + Libras</span></div>
+<div class="eyebrow">Comunicação em prática</div>
+<h1>ECOAR <span>Laboratório de Oratória Bilíngue</span></h1>
+<p class="lead">Pratique sua comunicação diante de pessoas reais, receba feedback estruturado e desenvolva presença, clareza e posicionamento em uma experiência bilíngue em Português e Libras.</p>
+<div class="ecoar-actions">
+<a class="btn primary" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20participar%20do%20ECOAR." data-event="ecoar_participar">Quero participar</a>
+<a class="btn ghost" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20levar%20o%20ECOAR%20para%20minha%20organiza%C3%A7%C3%A3o." data-event="ecoar_organizacao">Levar para minha organização</a>
+</div>
+</div>
+<figure class="ge-hero-visual"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1050&q=80&fit=crop&auto=format" alt="Apresentação ao público, imagem ilustrativa" loading="eager" decoding="async" width="800" height="900"><span class="ge-visual-index" aria-hidden="true">ECOAR</span><figcaption class="ge-visual-caption"><small>ECOAR</small>Comunicação que ganha presença</figcaption></figure>
+<aside class="ecoar-quote"><strong>“Aqui, toda voz encontra espaço. E toda verdade encontra eco.”</strong><small>Frase fundadora do ECOAR</small></aside>
+</div>
+</section>
+
+<div class="ecoar-band"><div class="wrap">Prática real <span>•</span> Feedback estruturado <span>•</span> Português + Libras <span>•</span> Oratória <span>•</span> Networking <span>•</span> Liderança</div></div>
+
+<section class="section" id="experiencia">
+<div class="wrap">
+<div class="section-head ecoar-intro"><div class="eyebrow">O que acontece no ECOAR</div><h2>Comunicação se desenvolve quando deixa de ser apenas teoria</h2><p>O ECOAR é uma experiência estruturada de prática comunicacional. O participante observa, apresenta, recebe feedback e desenvolve sua presença em contato com situações reais de comunicação.</p></div>
+<div class="ecoar-grid-3">
+<article class="ecoar-card"><span class="num">01</span><h3>Prática real</h3><p>Discursos, apresentações e exercícios que colocam a comunicação em movimento diante de outras pessoas.</p></article>
+<article class="ecoar-card"><span class="num">02</span><h3>Feedback estruturado</h3><p>Orientações e avaliações organizadas, respeitosas e voltadas ao desenvolvimento do participante.</p></article>
+<article class="ecoar-card"><span class="num">03</span><h3>Conexão</h3><p>Observação consciente e networking guiado para ampliar repertório, escuta e relações profissionais.</p></article>
+</div>
+</div>
+
+<div class="wrap ge-photo-strip" aria-label="Imagens editoriais ilustrativas">
+<figure><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1100&q=78&fit=crop&auto=format" alt="" loading="lazy" decoding="async" width="1000" height="540"><figcaption>Expressão e presença</figcaption></figure>
+<figure><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=850&q=78&fit=crop&auto=format" alt="" loading="lazy" decoding="async" width="750" height="540"><figcaption>Escuta e interação</figcaption></figure>
+</div>
+</section>
+
+<section class="section soft" id="metodo">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Método ECOAR</div><h2>Antes, durante e depois do encontro</h2><p>O Laboratório de Oratória é o formato oficial do ECOAR. A experiência é construída como processo, não como ação isolada.</p></div>
+<div class="ecoar-process">
+<article class="ecoar-step"><strong>Antes</strong><p>Preparação</p><ul><li>orientação do participante</li><li>estrutura e clareza da mensagem</li><li>postura, presença e alinhamento</li></ul></article>
+<article class="ecoar-step"><strong>Durante</strong><p>Experiência</p><ul><li>orientação educativa</li><li>discursos e apresentações</li><li>feedback e networking guiado</li></ul></article>
+<article class="ecoar-step"><strong>Depois</strong><p>Continuidade</p><ul><li>reflexão sobre o feedback</li><li>conexão entre participantes</li><li>novas oportunidades de prática</li></ul></article>
+</div>
+</div>
+</section>
+
+<section class="section ecoar-bilingual" id="bilingue">
+<div class="wrap split">
+<div><div class="eyebrow" style="color:#e5bf59">Português + Libras</div><h2>Duas línguas. O mesmo espaço de desenvolvimento.</h2><p>O ECOAR foi concebido para permitir a participação de pessoas ouvintes e surdas. Discursos podem acontecer em Português ou Libras, com mediação de interpretação conforme a estrutura da experiência.</p><p>Libras não entra como detalhe decorativo. Ela integra a concepção do laboratório e a possibilidade real de ocupar o espaço de comunicação.</p></div>
+<div class="ecoar-symbol" aria-label="Português e Libras">PT<br>↔<br>LIBRAS</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">O que desenvolvemos</div><h2>Três pilares. Uma única experiência.</h2></div>
+<div class="ecoar-grid-3">
+<article class="ecoar-card"><span class="num">ORATÓRIA</span><h3>Clareza e presença</h3><p>Estrutura de discurso, ritmo, postura, expressão, mensagem e presença diante do público.</p></article>
+<article class="ecoar-card"><span class="num">NETWORKING</span><h3>Conexão e troca</h3><p>Relacionamento intencional, visibilidade profissional, escuta e criação de conexões humanas.</p></article>
+<article class="ecoar-card"><span class="num">LIDERANÇA</span><h3>Posicionamento e influência</h3><p>Presença, posicionamento, influência positiva e consciência relacional na forma de comunicar.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section soft">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Duas portas de entrada</div><h2>Como você quer viver o ECOAR?</h2></div>
+<div class="ecoar-paths">
+<article class="ecoar-path"><h3>Quero participar</h3><p>Você pode aprender como público observador ou se preparar para ocupar o palco e apresentar uma mensagem diante de outras pessoas.</p><a class="btn primary" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20participar%20do%20ECOAR." data-event="ecoar_participar_meio">Quero participar</a></article>
+<article class="ecoar-path"><h3>Quero levar para uma organização</h3><p>Empresas, instituições, escolas, universidades, comunidades e outros parceiros podem receber uma experiência ECOAR aplicada ao próprio contexto.</p><a class="btn primary" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20o%20ECOAR%20para%20minha%20organiza%C3%A7%C3%A3o." data-event="ecoar_b2b_meio">Conversar com o GEB</a></article>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap split">
+<div><div class="eyebrow">Para quem é</div><h2>Para quem precisa colocar a comunicação em movimento</h2><p>O ECOAR faz sentido para quem precisa apresentar ideias, falar diante de grupos, conduzir reuniões, defender projetos, representar uma organização, construir presença profissional ou desenvolver clareza e posicionamento.</p><p>Profissionais, lideranças, empreendedores, estudantes e pessoas surdas ou ouvintes podem encontrar diferentes formas de participação na experiência.</p></div>
+<div class="notice"><strong>Você não precisa chegar “pronto”.</strong><p>O laboratório existe justamente para que a comunicação possa ser praticada, observada e desenvolvida em um ambiente estruturado.</p></div>
+</div>
+</section>
+
+<section class="section soft">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Princípios da experiência</div><h2>Um ambiente de prática estruturado e respeitoso</h2><p>O ECOAR trabalha com regras claras para que desenvolvimento não se confunda com exposição ou constrangimento.</p></div>
+<div class="ecoar-rules">
+<div class="ecoar-rule"><b>✓</b><span>Respeito à pessoa que apresenta</span></div>
+<div class="ecoar-rule"><b>✓</b><span>Feedback organizado e voltado ao desenvolvimento</span></div>
+<div class="ecoar-rule"><b>✓</b><span>Ausência de ridicularização</span></div>
+<div class="ecoar-rule"><b>✓</b><span>Proteção contra exposição indevida</span></div>
+<div class="ecoar-rule"><b>✓</b><span>Regras claras de convivência</span></div>
+<div class="ecoar-rule"><b>✓</b><span>Valorização da fala e da sinalização</span></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Jornada temática</div><h2>Temas que podem ganhar o palco</h2><p>O método possui uma trilha temática para provocar prática, reflexão e desenvolvimento comunicacional sem transformar o laboratório em uma sequência rígida de aulas.</p></div>
+<div class="ecoar-topics">
+<div class="ecoar-topic">Voz e Verdade</div><div class="ecoar-topic">Liderança que Escuta</div><div class="ecoar-topic">Ideias que Transformam</div>
+<div class="ecoar-topic">Presença Executiva</div><div class="ecoar-topic">Diversidade de Vozes</div><div class="ecoar-topic">Networking Estratégico</div>
+<div class="ecoar-topic">Superação</div><div class="ecoar-topic">Comunicação Criativa</div><div class="ecoar-topic">Propósito e Responsabilidade</div>
+<div class="ecoar-topic">Comunicação em Crise</div><div class="ecoar-topic">Legado e Herança</div><div class="ecoar-topic">Vozes Integradas</div>
+</div>
+</div>
+</section>
+
+<section class="section ecoar-org" id="organizacoes">
+<div class="wrap ecoar-org-grid">
+<div><div class="eyebrow">ECOAR em organizações</div><h2>Leve a experiência para o contexto da sua organização</h2><p>O núcleo da proposta permanece o mesmo: aprender comunicação pela prática real. O laboratório pode ser estruturado para grupos e instituições considerando público, objetivo e contexto.</p><a class="btn primary" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20uma%20experi%C3%AAncia%20ECOAR%20na%20minha%20organiza%C3%A7%C3%A3o." data-event="ecoar_b2b">Solicitar conversa institucional</a></div>
+<div class="ecoar-org-list">
+<div class="ecoar-org-item"><strong>Empresas</strong><br>Comunicação, apresentações, liderança e posicionamento.</div>
+<div class="ecoar-org-item"><strong>Escolas e universidades</strong><br>Experiências de prática e desenvolvimento comunicacional.</div>
+<div class="ecoar-org-item"><strong>Órgãos e instituições</strong><br>Laboratórios aplicados a públicos e objetivos específicos.</div>
+<div class="ecoar-org-item"><strong>Comunidades e parceiros</strong><br>Experiências abertas, fechadas ou realizadas em parceria.</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap ecoar-founder">
+<div class="ecoar-founder-mark"><div class="eyebrow">Idealização e condução</div><strong>Eduarda Bispo</strong><p>Idealizadora, facilitadora e guardiã do método ECOAR.</p></div>
+<div><h2>Comunicação, formação, Libras e desenvolvimento humano no mesmo projeto</h2><p>O ECOAR nasce da interseção entre experiência em Libras, formação, desenvolvimento humano, liderança e atuação empresarial. A condução preserva o método, o fluxo da experiência e os princípios de respeito que estruturam o laboratório.</p></div>
+</div>
+</section>
+
+<section class="section soft ecoar-faq" id="faq">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Dúvidas frequentes</div><h2>Antes de participar</h2></div>
+<details><summary>O que é o ECOAR?</summary><p>É um Laboratório de Oratória Bilíngue, em Português e Libras, baseado em prática real, observação consciente, feedback estruturado, networking e desenvolvimento de liderança.</p></details>
+<details><summary>Preciso saber falar bem para participar?</summary><p>Não. O laboratório existe para criar oportunidades estruturadas de prática e desenvolvimento da comunicação.</p></details>
+<details><summary>Posso participar sem apresentar um discurso?</summary><p>Sim. Conforme o formato da experiência, o público também participa como observador consciente e aprende pela escuta, análise e interação.</p></details>
+<details><summary>Pessoas surdas podem apresentar?</summary><p>Sim. O ECOAR foi concebido como experiência bilíngue em Português e Libras, com mediação de interpretação conforme a estrutura do encontro.</p></details>
+<details><summary>Existe preparação antes da apresentação?</summary><p>Sim. A preparação pode incluir clareza de mensagem, estrutura do discurso, postura, presença e alinhamento da experiência.</p></details>
+<details><summary>O participante recebe feedback?</summary><p>O feedback estruturado é um dos elementos metodológicos do ECOAR e é conduzido de forma organizada e respeitosa.</p></details>
+<details><summary>O ECOAR é um curso?</summary><p>Não é estruturado como curso tradicional. Seu formato oficial é o Laboratório de Oratória, com aprendizagem baseada em prática, observação, feedback e continuidade.</p></details>
+<details><summary>Empresas e instituições podem contratar o ECOAR?</summary><p>Sim. O laboratório pode ser aplicado ao contexto de organizações e parceiros. O escopo é definido conforme público, objetivo e formato da experiência.</p></details>
+<details><summary>Quando será a próxima experiência ECOAR?</summary><p>Quando uma edição estiver confirmada, data, horário, local ou modalidade e forma de participação serão divulgados. Você pode falar com o GEB para receber informações sobre a próxima edição.</p></details>
+</div>
+</section>
+
+<section class="section ecoar-final">
+<div class="wrap cta">
+<div><div class="eyebrow" style="color:#e5bf59">ECOAR</div><h2>Sua comunicação precisa de espaço para ser praticada.</h2><p>Escolha se quer participar de uma experiência ECOAR ou conversar sobre uma aplicação para sua organização.</p></div>
+<div class="ecoar-actions">
+<a class="btn accent" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20participar%20do%20ECOAR." data-event="ecoar_participar_final">Quero participar</a>
+<a class="btn ghost" style="color:#14211b" href="https://wa.me/551121105473?text=Ol%C3%A1%2C%20quero%20conversar%20sobre%20uma%20parceria%20ou%20aplica%C3%A7%C3%A3o%20do%20ECOAR." data-event="ecoar_parceria_final">Quero conversar sobre parceria</a>
+</div>
+</div>
+</section>
+
+<section class="section"><div class="wrap"><div class="ecoar-secondary"><strong>Coleção ECOAR</strong> — produtos e materiais temáticos podem ser consultados na loja do GEB. <a class="btn ghost action-btn" href="https://loja.grupoeduardabispo.com.br/" rel="noopener">Acessar loja</a> Esta oferta é complementar e não integra o núcleo metodológico do Laboratório de Oratória.</div></div></section>
+</main>
+
+<footer class="footer"><div class="wrap footer-grid"><div><strong>ECOAR</strong><p>Laboratório de Oratória Bilíngue · Português + Libras.</p><small>Uma solução do GEB Empresarial — Grupo Eduarda Bispo.</small></div><div><strong>Participação</strong><p><a href="#experiencia">A experiência</a><br><a href="#metodo">Como funciona</a><br><a href="#organizacoes">ECOAR em organizações</a><br><a href="#faq">Dúvidas</a></p></div><div><strong>Institucional</strong><p><a href="https://gebempresarial.grupoeduardabispo.com.br/">GEB Empresarial</a><br><a href="https://gebempresarial.grupoeduardabispo.com.br/contato/">Contato</a><br><a href="https://gebempresarial.grupoeduardabispo.com.br/privacidade/">Privacidade</a><br><a href="https://gebempresarial.grupoeduardabispo.com.br/termos/">Termos de uso</a></p></div></div><div class="wrap footer-bottom"><small>© 2026 ECOAR · GEB Empresarial. Todos os direitos reservados.</small></div></footer>
+<div vw class="enabled" aria-label="Acessibilidade em Libras"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+<script>document.addEventListener("DOMContentLoaded",()=>{const b=document.querySelector(".menu-toggle"),m=document.getElementById("menu-principal");if(!b||!m)return;const close=()=>{m.classList.remove("open");b.setAttribute("aria-expanded","false")};b.addEventListener("click",()=>{const open=m.classList.toggle("open");b.setAttribute("aria-expanded",String(open))});m.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));document.addEventListener("keydown",e=>{if(e.key==="Escape")close()})});</script>
+</body>
+</html>
