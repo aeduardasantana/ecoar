@@ -57,7 +57,6 @@ jobs:
             set ftp:ssl-allow yes;
             set net:max-retries 2;
             set net:timeout 30;
-            mkdir -p ./public_html/ecoar/;
             mirror --reverse --verbose --no-perms ./site/ ./public_html/ecoar/;
             bye;
           "
