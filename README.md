@@ -1,21 +1,19 @@
-# ECOAR — Laboratório de Oratória Bilíngue
+# ECOAR — Site oficial
 
-Site público: https://ecoar.grupoeduardabispo.com.br/
+Domínio: https://ecoar.grupoeduardabispo.com.br/
 
-Projeto ECOAR, vinculado institucionalmente ao GEB Empresarial — Grupo Eduarda Bispo.
+Seis ofertas comerciais: Guia, ECOAR Essencial, ECOAR Lab, ECOAR Seu Palco, Mentoria ECOAR e ECOAR Organizações.
 
-## Publicação
-- Código estático em `site/`.
-- GitHub Actions publica o conteúdo de `site/` na pasta `public_html/ecoar/` da hospedagem Locaweb a cada atualização na branch `main`.
-- Segredos de repositório necessários: `HOST`, `USER`, `PASS`.
-- A rotina não exclui arquivos remotos (`mirror --reverse` sem `--delete`) para evitar remoções imprevistas.
-- A efetiva publicação depende de DNS, SSL, permissões FTP e execução bem-sucedida do workflow.
+**Jornada ECOAR é metodologia**, não produto, com doze temas e três níveis.
 
-## Fonte editorial
-A estrutura e os textos iniciais foram adaptados da página ECOAR já existente no GEB Empresarial, respeitando as diretrizes de divulgação do laboratório. Não são anunciadas datas de edições sem confirmação.
+Todos os CTAs comerciais levam ao WhatsApp +55 11 2110-5473 com mensagem específica. Instagram oficial preservado: @goianiatoastmasters. E-mail: goianiatoastmasters@gmail.com.
 
-## Organização
-`site/index.html`: apresentação pública.
-`site/robots.txt`: orientação de rastreamento.
-`site/sitemap.xml`: endereços locais, sem outros domínios.
-`.github/workflows/deploy.yml`: implantação por FTP na Locaweb.
+Páginas estáticas em `site/`, CSS em `site/assets/css/ecoar.css`, JS de menu em `site/assets/js/ecoar.js`, fotografias reais em `site/assets/images/`. SEO com canonical, JSON-LD, Open Graph, `sitemap.xml` e `robots.txt`; rodapé e mapa do site padronizados. Publicação GitHub Actions → Locaweb em `public_html/ecoar/`.
+
+Fontes: [Arquitetura do site](https://docs.google.com/document/d/1JIXPCES6Y3j6S7W0KO5R0scujG8i4WaFMoY3HQ3z85c/edit) e [Catálogo mestre](https://docs.google.com/document/d/1M1mSqlGR_vX_pCbSI3cw9w35j_oYY4kepFo9Ue3Jk2M/edit).
+
+Antes de cobrar: confirmar a disponibilidade real do produto, preços, agenda, autorizações de imagem e condições operacionais.
+
+## Analytics com consentimento
+
+Foi preservado o identificador GA4 já instalado neste repositório (`G-G4C7TJ2K13`). `site/assets/js/ga4-consent.js` só carrega a medição após consentimento expresso, em todas as páginas. Há opção de continuar sem medição e reabrir as preferências no site; política própria em `/privacidade/`.

@@ -39,7 +39,7 @@
     var panel = document.createElement("section");
     panel.id = "ecoar-ga4-consent";
     panel.setAttribute("aria-label", "Preferências de privacidade e medição");
-    panel.style.cssText = "position:fixed;bottom:16px;left:16px;right:16px;max-width:620px;margin:auto;z-index:2147483000;background:#fff;color:#14211b;border:1px solid #627065;box-shadow:0 8px 28px rgba(0,0,0,.24);padding:18px;font:14px/1.5 system-ui,Arial,sans-serif";
+    panel.style.cssText = "position:fixed;bottom:16px;left:16px;right:16px;max-width:620px;margin:auto;z-index:2147483000;background:#fff;color:#19171f;border:1px solid #b4a7b0;box-shadow:0 8px 28px rgba(0,0,0,.24);padding:18px;font:14px/1.5 system-ui,Arial,sans-serif";
     var title = document.createElement("strong");
     title.textContent = "Privacidade e medição";
     title.style.cssText = "display:block;font-size:17px;margin-bottom:8px";
@@ -47,16 +47,16 @@
     message.textContent = "Com sua autorização, o ECOAR utiliza o Google Analytics para compreender as visitas e melhorar a experiência do site. Você pode continuar sem medição e alterar sua escolha depois.";
     message.style.cssText = "margin:0 0 12px";
     var link = document.createElement("a");
-    link.href = "https://gebempresarial.grupoeduardabispo.com.br/privacidade/";
+    link.href = "/privacidade/";
     link.textContent = "Política de privacidade";
-    link.style.cssText = "display:inline-block;margin-bottom:12px;color:#14211b;text-decoration:underline";
+    link.style.cssText = "display:inline-block;margin-bottom:12px;color:#19171f;text-decoration:underline";
     var actions = document.createElement("div");
     actions.style.cssText = "display:flex;gap:8px;flex-wrap:wrap";
     [["Continuar sem medição", "denied"], ["Aceitar medição", "granted"]].forEach(function (option) {
       var b = document.createElement("button");
       b.type = "button";
       b.textContent = option[0];
-      b.style.cssText = "min-height:44px;padding:10px 14px;border:1px solid #14211b;cursor:pointer;font:600 13px system-ui,Arial,sans-serif;background:" + (option[1] === "granted" ? "#14211b" : "#fff") + ";color:" + (option[1] === "granted" ? "#fff" : "#14211b");
+      b.style.cssText = "min-height:44px;padding:10px 14px;border:1px solid #19171f;cursor:pointer;font:600 13px system-ui,Arial,sans-serif;background:" + (option[1] === "granted" ? "#19171f" : "#fff") + ";color:" + (option[1] === "granted" ? "#fff" : "#19171f");
       b.addEventListener("click", function () { selectPreference(option[1]); });
       actions.appendChild(b);
     });
@@ -69,7 +69,7 @@
     button.type = "button";
     button.textContent = "Privacidade";
     button.setAttribute("aria-label", "Alterar preferências de medição");
-    button.style.cssText = "position:fixed;bottom:8px;left:8px;min-height:36px;z-index:2147482999;background:#fff;color:#14211b;border:1px solid #627065;padding:7px 10px;cursor:pointer;font:12px system-ui,Arial,sans-serif";
+    button.style.cssText = "position:fixed;bottom:8px;left:8px;min-height:36px;z-index:2147482999;background:#fff;color:#19171f;border:1px solid #b4a7b0;padding:7px 10px;cursor:pointer;font:12px system-ui,Arial,sans-serif";
     button.addEventListener("click", openPanel);
     document.body.appendChild(button);
     if (preference === "granted") loadAnalytics();
